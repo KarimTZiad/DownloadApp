@@ -1,0 +1,79 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.motion.widget.MotionLayout
+    android:id="@+id/detailsLayout"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".DetailsActivity"
+    app:layoutDescription="@xml/activity_details_scene">
+
+    <TextView
+        android:id="@+id/fileNameTextView"
+        style="@style/TitleText"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:text="@string/file_name_text"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintEnd_toStartOf="@+id/fileNameValueTextView"
+        app:layout_constraintHorizontal_weight="1"
+        android:layout_marginStart="10dp"
+        android:layout_marginTop="10dp"/>
+
+    <TextView
+        android:id="@+id/fileNameValueTextView"
+        style="@style/ValueText"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/fileNameTextView"
+        app:layout_constraintTop_toTopOf="parent"
+        android:layout_marginTop="10dp"
+        android:layout_marginEnd="10dp"
+        android:layout_marginStart="10dp"
+        app:layout_constraintHorizontal_weight="1"
+        tools:text="Glide - Image Loading Library by BumpTech"/>
+
+    <TextView
+        android:id="@+id/statusTextView"
+        style="@style/TitleText"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:text="@string/status_text"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/fileNameTextView"
+        app:layout_constraintEnd_toStartOf="@+id/statusValueTextView"
+        app:layout_constraintHorizontal_weight="1"
+        app:layout_constraintBaseline_toBaselineOf="@id/statusValueTextView"
+        android:layout_marginStart="10dp"
+        android:layout_marginTop="30dp"/>
+
+    <TextView
+        android:id="@+id/statusValueTextView"
+        style="@style/ValueText"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/statusTextView"
+        app:layout_constraintTop_toBottomOf="@id/fileNameValueTextView"
+        android:layout_marginTop="30dp"
+        android:layout_marginEnd="10dp"
+        android:layout_marginStart="10dp"
+        app:layout_constraintHorizontal_weight="1"
+        tools:text="Success"/>
+
+    <Button
+        android:id="@+id/okayButton"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:text="@android:string/ok"
+        android:layout_marginStart="10dp"
+        android:layout_marginEnd="10dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        android:layout_marginBottom="10dp"
+        app:cornerRadius="16dp" />
+</androidx.constraintlayout.motion.widget.MotionLayout>
